@@ -16,7 +16,7 @@ The CDN are used to provide faster loading response to client when requested for
 Q: Why is React known as React?<br />
 Ans: It was Library developed by facebook developer in 2013 and it was named "React" because it was meant to help developers to build fast and "reactive" interfaces.
 
-Q: What is cross-origin in the script tag?
+Q: What is cross-origin in the script tag?<br />
 Ans: When we want to load a resources from another domain aside from our own domain. Here is where CROS is needed. It is way to interact between browser and server; it also determine if it is safe to allow cross-origin request. So it is basically used for the security purpose.
 
 Q: What is the difference between React and ReactDOM?<br />
