@@ -1,5 +1,5 @@
 Q: What is Emmet?
-Ans: An Emmet is a toolkit that enables the developer to write large block of html code by using simple shortcode. They can be archieve by using various tool or extension.
+Ans: An Emmet is a toolkit that enables the developer to write large block of html code by using a simple shortcode. They can be achieved by using various tool or extension.
 
 Q: Difference between a Library and Framework?
 Ans: The main difference between Library and Framework is as follow:
