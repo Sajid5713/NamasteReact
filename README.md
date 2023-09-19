@@ -30,15 +30,16 @@
 
 -> HMR Hot Module Replacement exchange, add or remove module during run time without a full reload. 
  - The application asks the HRM runtime to check for updates.
- - Then the HRM runtime asynchronously download the updated and notifies the application. 
- - Then application ask the runtime to update the changes. 
- - Afterward runtime synchronously updates the changes.
+ - Then the HRM runtime asynchronously downloads the updated and notifies the application. 
+ - Then the application asks the runtime to update the changes. 
+ - Afterward, runtime synchronously updates the changes.
+</br>
 
 - List down your favorite 5 superpowers of Parcel and describe any 3 of them in your own words. 
 
--> Parcel came with many features that enables the developers to write a efficient code. Some of them are below:
+-> Parcel came with many features that enabled the developers to write efficient code. Some of them are below:
 
- - Dev build --- Generate a development ready application in one go.
+ - Dev build --- Generate a development-ready application in one go.
  - Local Server --- Generate a Local server environment for the app.
  - Hot reloading 
  - Caching --- Generate a cache
@@ -46,34 +47,34 @@
  - Error handling
  - Tree shaking
  - Diagnostics
- - Differential Bundling -- Allow the apps compatible for all browsers and versions.
+ - Differential Bundling -- Allow the apps compatible with all browsers and versions.
  - Code Splitting
 
-- What is `.gitignore`? What should we add and not add into it? 
+- What is `.gitignore`? What should we add and not add to it? 
 
--> The .gitignore is a plain file that contains a pattern for files / folder to ignore. All data that are required for our application should not be added. only files/dir that can be regenerated can be put into .gitignore file like node_modules, dist, cache etc.
+-> The .gitignore is a plain file that contains a pattern for files/folders to ignore. All data that are required for our application should not be added. only files/dir that can be regenerated can be put into .gitignore files like node_modules, dist, cache, etc.
 
 - What is the difference between `package.json` and `package-lock.json` 
 
--> The package.json is configuration for NPM manager. These packages are also called "Dependencies". The package-lock.json keep track of the exact version of the dependency that is installed on the development, if a new release of the packages is released it keep the track of the exact version.
+-> The package.json is a configuration for the NPM manager. These packages are also called "Dependencies". The package-lock.json keeps track of the exact version of the dependency that is installed on the development, if a new release of the packages is released it keeps track of the exact version.
 
 - Why should I not modify `package-lock.json`? 
 
--> This files contain all the data record of the exact version of all the Dependencies that are used by the application. The purpose of this files is to ensure that same dependencies are installed across all different environment, such as development and production environments.
+-> These files contain all the data records of the exact version of all the Dependencies that are used by the application. The purpose of these files is to ensure that the same dependencies are installed across all different environments, such as development and production environments.
 
-- What is `node_modules` ? Is it a good idea to push that on git? 
+- What is `node_modules`? Is it a good idea to push that on git? 
 
--> It is like DB for all dependencies. All dependencies fetch from NPM registry are inside node_modules. Since it can be regenerated with package.json and package-lock.json so there is no need to push it to git.
+-> It is like DB for all dependencies. All dependencies fetched from the NPM registry are inside node_modules. Since it can be regenerated with package.json and package-lock.json there is no need to push it to git.
 
 - What is the `dist` folder? 
 
--> When we run command npx parcel <index file> it start to bundle the files and generate dev. build and hosted it to local server with port and place all the files inside this dist. directory. When we make a change it use the dist and .cache to show these changes.
+-> When we run the command npx parcel <index file> it starts to bundle the files and generate dev. build and hosted it to a local server with a port and place all the files inside this dist. directory. When we make a change it use the dist and .cache to show these changes.
 
 - What is `browserlists`?
 
--> It is tools that specifies which browsers should our apps. should use by specifying in package.json file /config file. 
+-> It is tools that specifies which browsers should our apps. should be used by specifying in the package.json file /config file. 
 
 Read about: ^ - caret and ~ - tilda 
 
--> ^ or  is json is used to automatically update the package
--> ~ it will install major version of packages, use it wisely as it can cause issues.
+-> ^ or  is JSON is used to automatically update the package
+-> ~ it will install major versions of packages, use it wisely as it can cause issues.
