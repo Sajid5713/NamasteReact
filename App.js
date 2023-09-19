@@ -1,21 +1,6 @@
+import React from "react";
+import ReactDOM from "react-dom/client"
 
-/*
-
-    <div id="parent">
-        <div id="child">
-            <h1>This is h1 tag</h1>
-            <h2>This is h2 tag</h2>
-        </div>
-         <div id="child">
-            <h1>This is h1 tag</h1>
-            <h2>This is h2 tag</h2>
-        </div>
-    </div>
-
-
-    ReactElement(Object) => HTML (Browser Understand)
-
-*/
 
 const parent = React.createElement(
                     'div',
@@ -47,14 +32,6 @@ const parent = React.createElement(
                 )
 
 
-// const heading = React.createElement(
-//     "h1",
-//     {id: "heading" , abc : "xyz"},
-//     "Hello World from React");
-
-    /*
-        const element = createElement(type, props, ...children)
-    */
     console.log(parent) // React.createElement give an Object with all the children and attribute (props)
 
     const root = ReactDOM.createRoot(document.getElementById('root'));
