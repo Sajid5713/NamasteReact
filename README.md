@@ -2,34 +2,34 @@
 
 - What is `NPM`?
 
--> Npm is the largest software registry, from which we can install packages/dependencies as per our need into out application. It is used to manage packages.
+-> Npm is the largest software registry, from which we can install packages/dependencies as per our need into our application. It is used to manage packages.
 
-    - npm install <package-name> or mpm i <package-name>
+    - npm install <package-name> or npm i <package-name>
 
 - What is `Parcel/Webpack`? Why do we need it? 
 
--> Parcel is a bundler that is used to packages our application properly so that it can be pushed to production. The use of the parcel is to increase the browser loading and execution. It also allow us to automatically preserve your application state between updates. It enables us to automatically remove the unused code in the application. There are numbers of many other reason for it used.
+-> Parcel is a bundler that is used to package our application properly so that it can be pushed to production. The use of the parcel is to increase the browser loading and execution. It also allows us to automatically preserve your application state between updates. It enables us to automatically remove the unused code in the application. There are numbers of many other reason for it use.
 
 - What is `.parcel-cache` 
 
--> When we run npx parcel <filename> it will generate a .parcel-cache directory and inside it it contain all the code that is written in C++ with information about our project and so when it is rebuild it doesn't have to re-parse and re-analyze the project again, making it faster in development mode.
+-> When we run npx parcel <filename> it will generate a .parcel-cache directory and inside it it contains all the code that is written in C++ with information about our project so when it is rebuilt it doesn't have to re-parse and re-analyze the project again, making it faster in development mode.
 
-- What is `npx` ? 
+- What is `npx`? 
 
--> NPX stands for (Node Package eXecute) used to execute the code inside the package. It enables the developer to execute JS package from NPM registry without even installing it. 
+-> NPX stands for (Node Package eXecute) used to execute the code inside the package. It enables the developer to execute the JS package from the NPM registry without even installing it. 
 
-- What is difference between `dependencies` vs `devDependencies`
+- What is the difference between `dependencies` vs `devDependencies`
 
--> Dependencies are packages that are necessary to run application properly and DevDependencies are required for development and testing purposes. 
+-> Dependencies are packages that are necessary to run applications properly and DevDependencies are required for development and testing purposes. 
 
 - What is Tree Shaking? 
 
--> Tree Shaking is process of reducing the unused / dead code to reduce the size of the bundle and improve performance. Tree Shaking is quite handy because the dependencies we install on our application can cause laggy performance, sometimes not all the dependencies are needed and just chunk of code is in need from a dependency.
+-> Tree Shaking is the process of reducing the unused/dead code to reduce the size of the bundle and improve performance. Tree Shaking is quite handy because the dependencies we install on our application can cause laggy performance, sometimes not all the dependencies are needed and just a chunk of code is in need from a dependency.
 
 - What is Hot Module Replacement? 
 
 -> HMR Hot Module Replacement exchange, add or remove module during run time without a full reload. 
- - The application ask the HRM runtime to check for updates.
+ - The application asks the HRM runtime to check for updates.
  - Then the HRM runtime asynchronously download the updated and notifies the application. 
  - Then application ask the runtime to update the changes. 
  - Afterward runtime synchronously updates the changes.
