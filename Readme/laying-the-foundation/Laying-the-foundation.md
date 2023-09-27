@@ -1,7 +1,7 @@
-1. What is JSX?
+1. What is JSX?</br>
 Ans- While we use the HTML and JS for making a layout for a website. It is easy and understandable, unlike traditional React because the core react code was not developers friendly to developed large scale application, the facebook developer's introduced a new syntax to write both HTML and JS in one go and they named it " JSX ". It is also Known as JAVASCRIPT XML. JSX make it easier to write HTML and add it to React.
 
-2. Superpowers of JSX?
+2. Superpowers of JSX?</br>
 Ans- JSX is a HTML like syntax, it is not HTML inside JAVASCRIPT. It is a convention to merge both HTML and JS. It provides a lot of things that helps to make an application.
 
     - A readable Syntax
@@ -10,7 +10,7 @@ Ans- JSX is a HTML like syntax, it is not HTML inside JAVASCRIPT. It is a conven
     - Easy to Use than tractional React Code
     - JSX help to write both HTML and JS.
 
-3. Role of type attribute in script tag? What options can I use there?
+3. Role of type attribute in script tag? What options can I use there?</br>
 Ans- The type attribute specifies the type of the script. It also identifies the content between the <script></script> tags. Some common values are :
 
     - JS MIMETYPE : text/javascript
@@ -18,7 +18,7 @@ Ans- The type attribute specifies the type of the script. It also identifies the
     - Another MIMETYPE
 
 
-4. {TitleComponent} vs {<TitleComponent />} vs {<TitleComponent></TitleComponent>} in JSX ?
+4. {TitleComponent} vs {<TitleComponent />} vs {<TitleComponent></TitleComponent>} in JSX ?</br>
 Ans- There are various ways to declare the component in React as in the end React is JS.
 
 {TitleComponent} : 
