@@ -5,7 +5,7 @@ Ans: JSX is not mandatory for making an application with React. Just JSX provide
 2. Is ES6 mandatory for React?</br>
 Ans: It is not mandatory for the react. However, it is the modern standard to use ES6 because it makes the code more readable and accessible.
 
-3. <li><code>{TitleComponent}</code> vs <code>{&lt;TitleComponent/&gt;}</code> vs <code>{&lt;TitleComponent&gt;&lt;/TitleComponent&gt;}</code> in JSX</li> </br>
+3. <code>{TitleComponent}</code> vs <code>{&lt;TitleComponent/&gt;}</code> vs <code>{&lt;TitleComponent&gt;&lt;/TitleComponent&gt;}</code> in JSX </br>
 Ans: There are various ways to declare the component in React as in the end, React is JS.
 
    - {TitleComponent} : 
