@@ -4,6 +4,7 @@ What is NPM?
 -> Npm is the largest software registry, from which we can install packages/dependencies as per our need into our application. It is used to manage packages.
 
 - npm install <package-name> or npm i <package-name>
+
 What is Parcel/Webpack? Why do we need it?
 -> Parcel is a bundler that is used to package our application properly so that it can be pushed to production. The use of the parcel is to increase the browser loading and execution. It also allows us to automatically preserve your application state between updates. It enables us to automatically remove the unused code in the application. There are numbers of many other reason for it use.
 
