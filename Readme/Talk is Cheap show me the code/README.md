@@ -11,7 +11,7 @@ Ans: There are various ways to declare the component in React as in the end, Rea
    - {TitleComponent} : 
     - When we use {} in JSX we can gain the magical ability to execute any JS in the {code} inside the curly braces. {TitleComponent} is treated as        a variable either with value or expression or React Element with no return.
 
-   - {<TitleComponent />}: 
+   - {{<TitleComponent/>}}: 
     - It is a common way to render a component inside React and call it inside another component. The component then returns 
 
     - JSX code => ReactElement() => JS Object => HTMLElement(render)
