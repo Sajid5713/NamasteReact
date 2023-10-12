@@ -8,15 +8,15 @@ Ans: It is not mandatory for the react. However, it is the modern standard to us
 3. {TitleComponent}</> vs {<TitleComponent/>}</> vs { <TitleComponent></TitleComponent/> }in JSX? </br>
 Ans: There are various ways to declare the component in React as in the end, React is JS.
 
-{TitleComponent} : 
-    - When we use {} in JSX we can gain the magical ability to execute any JS in the {code} inside the curly braces. {TitleComponent} is treated as a variable either with value or expression or React Element with no return.
+   - {TitleComponent} : 
+    - When we use {} in JSX we can gain the magical ability to execute any JS in the {code} inside the curly braces. {TitleComponent} is treated as        a variable either with value or expression or React Element with no return.
 
-{<TitleComponent />}: 
+   - {<TitleComponent />}: 
     - It is a common way to render a component inside React and call it inside another component. The component then returns 
 
     - JSX code => ReactElement() => JS Object => HTMLElement(render)
 
-{<TitleComponent></TitleComponent>}: 
+   - {<TitleComponent></TitleComponent>}: 
     - It is a way to render a component inside React. It is similar to this{<TitleComponent />} to call a component.
 
 
