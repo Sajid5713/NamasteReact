@@ -13,16 +13,4 @@ Ans : Hooks are function that let you "hook' into React state and lifecycle feat
 
 4. Why do we need a <strong>useState</strong> Hook?</br>
 Ans: The use of state hooks is to keep track of the value given to it and update it accordingly. When the state variable update React rerender the component.
-    
-Coding
-   
-Clean up your code
-Create a Folder Structure for your app
-Make different files for each Components
-Create a config file
-Use all types of import and export
-Create a Search Box in your App
-Use useState to create a variable and bind it to the input box
-Try to make your search bar work<br><br>
-    
    
