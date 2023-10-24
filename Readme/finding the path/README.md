@@ -1,18 +1,18 @@
-1. What are various ways to add images into our App? Explain with code examples? </br>
-Ans: There are various ways to used images into our app.
+1. What are various ways to add images to our App? Explain with code examples. </br>
+Ans: There are various ways to use images in our app.
     <ol>
         <li>Use the import keyword.</li>
         <code>
             import img from "./myImg";
-            <img src={//img//} alt="title">
+            <img src="{img}" alt="title">
         </code>
         <li>Use the require keyword</li>
         <code>
-            <img src={//require("./myImg")//} alt="title">
+            <img src="{require("./myImg")}" alt="title">
         </code>
         <li>Import SVGs directly as a React component</li>
         <code>
-            import { //Image as Logo //} from "./logo.svg"
+            import { Image as Logo } from "./logo.svg"
             <div><Logo></div>
         </code>
         <li>Load images directly from the network. </li>
