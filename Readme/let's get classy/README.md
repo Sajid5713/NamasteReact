@@ -1,51 +1,100 @@
+1. How do you create Nested Routes react-router-dom configuration?
+   Ans: We can create nested routes like as follow:
 
-1. What is a Microservice?</br>
-Ans: Microservice is a small independent processes that combined together to form a complex application. These are small building blocks, efficient in doing the single task given like UI service, DB , BE etc.
+<code>
+    const appRoutes = createBrowserRouter([
+        path:"/",
+        element: <Applayout/>,
+        children:[
+            {
+                path:'/',
+                element:<Body/>
+            },
+            {
+                path:'/about',
+                element:<About/>
+            },
+            {
+                path:'/contact',
+                element:<Contact/>
+            }
 
-2. What is Monolith architecture?</br>
-Ans: It is a traditional model of a software program, that is built as unified unit that is self-contained and independent from other applications. In monolith architecture everyone work on a single repository.
+        ]
+    ])
 
-3. What is the difference between Monolith and Microservice?</br>
-Ans: Monolith is traditional model of software, that is built as a unified unit and Microservices are small independent process merge together to form a large applications.
+</code>
 
-4. Why do we need a useEffect Hook?</br>
-Ans: The useEffect helps us to add side effects in functional component, after the DOM is updated. It takes two arguments: 
-    - function
-    - optional array
-
-5. What is Optional Chaining?</br>
-Ans: Optional Chaining is a method for calling properties, methods and subscripts that might be null.
-
-6. What is Shimmer UI?</br>
-Ans: It is method to show a mockup UI for the user, until the actual data render.
-
-7. What is the difference between JS expression and JS statement?</br>
-Ans: Expression is something that return a value and statement does not.
-
-8. What is Conditional Rendering, explain with a code example?</br>
-Ans: A render that happens based on condition is called conditional rendering.
+2.  What is the order of life cycle method calls in Class Based Components
+    Ans: The Order of life cycle of class based component is as follow:
     <code>
-    function Result(props) {
-    const result = props.isGoal;
-    if (result) {
-        return "the condition is true";
-    }
-    return "the condition is false";
-    }
-    
-    const root = ReactDOM.createRoot(document.getElementById('root'));
-    root.render(<Result isGoal={true} />);
+    Mounting: 1. Constructor 2. Render 3. ComponentDidMount() 4. State variable update (this.setState)
+    </code>
+    <code>
+    Updating:
+
+        1. render
+        2. ComponentDidUpdate()
+
+    </code>
+    <code>
+    Unmounting:
+    This method is called when a component is being removed from the DOM:
+
+        1. componentWillUnmount()
+
     </code>
 
-9. What is CORS?</br>
-Ans: Cross-origin resource sharing (CORS) is a mechanism for integrating applications.
+3.  Why do we use componentDidMount?
+    Ans: It is called When component is place on the DOM. It is used to handle all network call and setting up subscription.
 
-10. What is async and await?</br>
-Ans: The terms are used to complete the task without blocking the execution of the program. 
-    </br>
-    Async Function (async): An async function is a function that is defined with the async keyword. This keyword is used to indicate that the function will perform asynchronous operations and will return a promise. An async function can contain one or more await expressions.
-    </br>
-    Await Expression (await): The await keyword is used inside an async function to pause the execution of that function until the asynchronous operation it is waiting for is complete. It is typically used with promises to wait for them to resolve. 
+4.  Why do we use componentWillUnmount? Show with example?
+    Ans: When we leave a page it will trigger componentWillUnmount(), so we have to clear things.
+    <code>
+        import React from 'react';
+            class ComponentOne extends React.Component {
 
-11. What is the use of `const json = await data.json();` in getRestaurants()?</br>
-Ans: The code const json = await data.json() fetches JSON data from an asynchronous operation, an API request. The await keyword pauses execution until data retrieval is complete, storing the result in json for further use.
+                // Defining the componentWillUnmount method
+                componentWillUnmount() {
+                alert('The component is going to be unmounted');
+                }
+
+                render() {
+                return <h1>Hello Geeks!</h1>;
+                }
+                }
+
+            class App extends React.Component {
+                state = { display: true };
+                delete = () => {
+                this.setState({ display: false });
+            };
+
+            render() {
+                let comp;
+                if (this.state.display) {
+                comp =
+                <ComponentOne />;
+                }
+                return (
+                    <div>
+                        {comp}
+                        <button onClick={this.delete}>
+                            Delete the component
+                        </button>
+                    </div>
+                );
+            }
+        }
+
+        export default App;
+
+    </code>
+
+6. (Research) Why do we use super(props) in constructor?
+   Ans: The super is used to call the constructor of its parent to gain the access to parent's property and methods.
+
+7. (Research) Why can't we have the callback function of useEffect async?
+   Ans:We can not directly make the callback function in useEffect hook async because of two reasons:
+
+    1. async functions implicitly returns a promise.
+    2. useEffect expects its callback to either return nothing or a cleanup function.
