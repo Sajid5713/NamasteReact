@@ -5,7 +5,7 @@ Ans: When the application is too large and we want to avoid bundling all the fil
 2. What is suspense?<br>
 Ans: Suspense is a component from "react", that allow you to handle asynchronous operation like code-splitting for lazy load component or data fetching.
 
-3. Why we got this error : A component suspended while responding to synchronous input. This will cause the UI to be replaced with a loading indicator. To fix, updates that suspend should be wrapped with startTransition? How does suspense fix this error?
+3. Why we got this error : A component suspended while responding to synchronous input. This will cause the UI to be replaced with a loading indicator. To fix, updates that suspend should be wrapped with startTransition? How does suspense fix this error?<br>
 Ans: This error is due to when we load a component on demand and while the code for lazy component is still loading, attempt to render is suspended. When it don't find the return component it halt the code execution and throw above error. so, use <Suspense> to display a loading indicator while it’s loading.
 
 4. Advantages and disadvantages of using this code splitting pattern?<br>
