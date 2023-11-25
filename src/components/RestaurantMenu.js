@@ -1,23 +1,28 @@
-import { useEffect, useState } from "react";
-import { MENU_API } from "../utils/constant";
+// import { useEffect, useState } from "react";
+// import { MENU_API } from "../utils/constant";
 import { Link, useParams } from "react-router-dom";
 import Shimmer from "./Shimmer";
+import useRestaurantMenu from "../utils/useRestaurantMenu";
 
 const RestaurantMenu = () => {
     const {resId} = useParams();
     // console.log(resId)
-    const [menuList , setmenuList] = useState('dfds');
+    // const [menuList , setmenuList] = useState();
     
-    useEffect(()=>{
-        fetchData();
-    },[])
+    // useEffect(()=>{
+    //     fetchData();
+    // },[])
 
-    const fetchData = async () => {
-       const data = await fetch(MENU_API + resId);
-       const json = await data.json();
-       setmenuList(json.data);
-    //    console.log(json.data)
-    }
+    // const fetchData = async () => {
+    //    const data = await fetch(MENU_API + resId);
+    //    const json = await data.json();
+    //    setmenuList(json.data);
+    // //    console.log(json.data)
+    // }
+
+    const menuList = useRestaurantMenu(resId);
+
+    
 
     if(menuList === null ) return <Shimmer/>
 
@@ -26,6 +31,8 @@ const RestaurantMenu = () => {
     // const { cards } = menuList?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR;
     // console.log(menuList?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR)
     // const {itemCards } = menuList?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR;
+
+    console.log(itemCards)
 
     return(
         <div className="container">
@@ -74,7 +81,7 @@ const RestaurantMenu = () => {
                                     <li key={items.card.info.id}>
                                         <div className="item-info">
                                             <h3 className="name">{items.card.info.name}</h3>
-                                            <p className="price"><del>{items.card.info.price/100}</del>- <span style={{color:"#000"}}>{items.card.info.finalPrice/100}</span></p>
+                                            <p className="price"><del>{items.card.info.price/100 ? items.card.info.price/100 : "" }</del>  <span style={{color:"#000"}}>{items.card.info.defaultPrice/100}</span></p>
                                             <p className="description">{items.card?.info.description}</p>
                                         </div>
                                         <div className="item-img">

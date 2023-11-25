@@ -1,4 +1,4 @@
-import { useRouteError} from "react-router-dom";
+import { Link, useRouteError} from "react-router-dom";
 
 const Error = () => {
     const error = useRouteError();
@@ -8,7 +8,7 @@ const Error = () => {
             <h1 className="notfound-404">Oops !</h1>
             <h4>{error.status}:{error.statusText}</h4>
             <p>{error.data}</p>
-            <button className="btn">Go Back</button>
+            <Link to="/"><button className="btn">Go Back</button></Link>
 
         </div>
     )

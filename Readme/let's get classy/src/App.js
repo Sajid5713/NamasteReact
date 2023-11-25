@@ -1,4 +1,4 @@
-import React from "react";
+import React, {StrictMode} from "react";
 import ReactDOM from "react-dom/client";
 import Header from "./components/Header";
 import Body from "./components/Body";
@@ -8,14 +8,15 @@ import Contact from "./components/Contact";
 import Error from "./components/Error";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import RestaurantMenu from "./components//RestaurantMenu";
+import Grocery from "./components/Grocery";
 
    const AppLayout = () => {
     return (
         <>
-        <Header/>
-        {/* <Body/> */}
-        <Outlet/>
-        <Footer/>
+            <Header/>
+            {/* <Body/> */}
+            <Outlet/>
+            <Footer/>
         </>
         
     )
@@ -39,6 +40,10 @@ import RestaurantMenu from "./components//RestaurantMenu";
                 element:<Contact/>
             },
             {
+                path:'/grocery',
+                element:<Grocery/>
+            },
+            {
                 path:'/restaurant/:resId',
                 element:<RestaurantMenu/>
             }
@@ -49,4 +54,9 @@ import RestaurantMenu from "./components//RestaurantMenu";
    ])
             
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<RouterProvider router={appRoutes}/>);
+root.render(
+
+    <StrictMode>
+        <RouterProvider router={appRoutes}/>
+    </StrictMode>
+);
